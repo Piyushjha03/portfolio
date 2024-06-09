@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-purple: #a290fc;
+  --primary-bg: #101010;
+  --secondary-bg: #282828;
+  --primary-border: #191919;
+  --secondary-border: #212121;
+  --dark-gray-text: #999999;
+  --text-white: #e6e6e6;
+  --tone-black: #141414;
+  --text-white: #cccccc;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #000;
+}

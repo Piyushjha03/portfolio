@@ -1,0 +1,71 @@
+@keyframes opacity-animation {
+  0% {
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-animation {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0.8;
+  }
+  70% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(3);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+}
+
+.pulse:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: #6dd33d;
+  border-radius: 100%;
+  opacity: 0.5;
+  transform: translate(-50%, -50%) scale(3);
+  animation: pulse-animation 3s infinite;
+}
+
+.pulse {
+  position: relative;
+  display: inline-block;
+  vertical-align: 1px;
+  width: 8px;
+  height: 8px;
+  margin: 0 6px;
+  background: #ffdd40;
+  color: transparent;
+  border-radius: 100%;
+  flex: 0 0 auto;
+  animation: opacity-animation 1s linear;
+  &.green {
+    background: #6dd33d;
+  }
+}
+
+/* add custom cursor */
+.typewriter::after {
+  content: "|";
+  display: inline;
+  animation: blink 1s infinite;
+}
+
+/* custom cursor animation */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
