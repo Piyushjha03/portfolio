@@ -75,9 +75,9 @@ const Home = () => {
 
   return (
     <>
-      <div className="canvas w-screen gap-4 flex justify-center items-center flex-col md:flex-row p-2 pt-8 sm:p-8">
-        <div className="msresponsive-top flex gap-4 flex-col-reverse sm:flex-row">
-          <div className="left flex flex-col gap-4">
+      <div className="canvas w-screen gap-4 flex justify-center items-center flex-col md:flex-row p-2 sm:p-8">
+        <div className="msresponsive-top w-full flex gap-4 flex-col-reverse sm:flex-row">
+          <div className="left flex flex-col gap-4 w-full">
             <div className="tech-stack bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)] w-96 rounded-3xl p-6 flex flex-col  items-center min-w-full sm:min-h-fit ">
               <div className="tech-stack-heading flex gap-2">
                 <div className="stack-icon flex justify-center items-center">
@@ -129,32 +129,43 @@ const Home = () => {
           <div className="middle flex flex-col w-full max-w-[480px] sm:max-w-[480px] sm:min-w-[480px]">
             <div className="socials flex gap-3 w-full">
               <div className="linkedin bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)] flex-1 rounded-3xl p-2 flex flex-col  items-center relative">
-                <img
-                  src={Linkedin}
-                  alt="Linkedin"
-                  className="h-16 w-16 grayscale hover:grayscale-0"
-                />
+                <a
+                  href="https://www.linkedin.com/in/piyush-jha-586218227/"
+                  target="_blank"
+                >
+                  <img
+                    src={Linkedin}
+                    alt="Linkedin"
+                    className="h-16 w-16 grayscale "
+                  />
+                </a>
               </div>
               <div className="github  bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)] flex-1 rounded-3xl p-2 flex flex-col  items-center relative">
-                <img
-                  src={GithubColored}
-                  alt="Github"
-                  className="h-16 w-16 grayscale hover:grayscale-0"
-                />
+                <a href="https://github.com/Piyushjha03" target="_blank">
+                  <img
+                    src={GithubColored}
+                    alt="Github"
+                    className="h-16 w-16 grayscale "
+                  />
+                </a>
               </div>
               <div className="twitter  bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)] flex-1 rounded-3xl p-2 flex flex-col  items-center justify-center relative">
-                <img
-                  src={Twitter}
-                  alt="Twitter"
-                  className="h-16 w-16 scale-90 grayscale hover:grayscale-0"
-                />
+                <a href="https://x.com/PiyushJha_dev" target="_blank">
+                  <img
+                    src={Twitter}
+                    alt="Twitter"
+                    className="h-16 w-16 scale-90 grayscale "
+                  />
+                </a>
               </div>
               <div className="instagram  bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)] flex-1 rounded-3xl p-2 flex flex-col  items-center justify-center relative">
-                <img
-                  src={Instagram}
-                  alt="Instagram"
-                  className="h-16 w-16 grayscale hover:grayscale-0"
-                />
+                <a href="https://www.instagram.com/_jhapiyush/" target="_blank">
+                  <img
+                    src={Instagram}
+                    alt="Instagram"
+                    className="h-16 w-16 grayscale"
+                  />
+                </a>
               </div>
             </div>
             <div className="personal w-full mt-4 bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-4 py-9 flex flex-col gap-3 items-center relative">
@@ -211,30 +222,45 @@ const Home = () => {
                 </div>
               </div>
               <div className="personal-bottom w-full flex gap-4 flex-col sm:flex-row">
-                <div className="emailme cursor-pointer flex gap-2 justify-center items-center flex-1 bg-[var(--primary-border)] min-h-12 rounded-xl">
-                  <MdEmail color="#a290fc" />
-                  <p className="font-mano text-[var(--dark-gray-text)]">
-                    Email Me
-                  </p>
-                </div>
-                <div className="whatsappme cursor-pointer flex gap-2 justify-center items-center flex-1 bg-[var(--primary-border)] min-h-12 rounded-xl">
-                  <IoLogoWhatsapp color="#a290fc" />
-                  <p className="font-mano text-[var(--dark-gray-text)]">
-                    WhatsApp Me
-                  </p>
-                </div>
+                <a href="mailto:jhapiyush2305@gmail.com " className="flex-1">
+                  <div className="emailme w-full cursor-pointer flex gap-2 justify-center items-center  bg-[var(--primary-border)] min-h-12 rounded-xl">
+                    <MdEmail color="#a290fc" />
+                    <p className="font-mano text-[var(--dark-gray-text)]">
+                      Email Me
+                    </p>
+                  </div>
+                </a>
+                <a href="https://wa.me/+919693169271" className="flex-1">
+                  <div className="whatsappme cursor-pointer flex gap-2 justify-center items-center  bg-[var(--primary-border)] min-h-12 rounded-xl">
+                    <IoLogoWhatsapp color="#a290fc" />
+                    <p className="font-mano text-[var(--dark-gray-text)]">
+                      WhatsApp Me
+                    </p>
+                  </div>
+                </a>
+
                 <div className="resume flex justify-center items-center gap-2 cursor-pointer flex-1 bg-[var(--primary-border)] min-h-12 rounded-xl sm:hidden">
                   <p className="text-[var(--text-white)]">Resume</p>
-                  <div className="download  p-2 rounded-md text-2xl cursor-pointer hover:-translate-y-1 duration-300 ">
-                    <FaFileArrowDown color="#cccccc" />
-                  </div>
+                  <a
+                    href="https://drive.google.com/file/d/1becCGmFJLDO9byeqKwriaamLv77RHIpL/view?usp=drive_link"
+                    target="_blank"
+                  >
+                    <div className="download  p-2 rounded-md text-2xl cursor-pointer hover:-translate-y-1 duration-300 ">
+                      <FaFileArrowDown color="#cccccc" />
+                    </div>
+                  </a>
                 </div>
               </div>
               <div className="resume absolute top-8 right-6  justify-center items-center gap-2 hidden sm:flex">
                 <p className="text-[var(--text-white)]">Resume</p>
-                <div className="download bg-[#1f1f1f] p-2 rounded-md text-2xl cursor-pointer hover:-translate-y-1 duration-300 ">
-                  <FaFileArrowDown color="#cccccc" />
-                </div>
+                <a
+                  href="https://drive.google.com/file/d/1becCGmFJLDO9byeqKwriaamLv77RHIpL/view?usp=drive_link"
+                  target="_blank"
+                >
+                  <div className="download bg-[#1f1f1f] p-2 rounded-md text-2xl cursor-pointer hover:-translate-y-1 duration-300 ">
+                    <FaFileArrowDown color="#cccccc" />
+                  </div>
+                </a>
               </div>
             </div>
             <div className="contact relative h-full w-full mt-4  bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-4 flex flex-col gap-4 items-center">
@@ -277,7 +303,7 @@ const Home = () => {
           </div>
         </div>
         <div className="msresponsive-bottom w-full flex justify-center items-center ">
-          <div className="right flex flex-col gap-4 md:flex-col sm:flex-row">
+          <div className="right w-full flex flex-col gap-4 md:flex-col sm:flex-row">
             <div className="work relative pb-16  bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-6 flex flex-col  items-center gap-6 w-full max-w-full md:min-w-full sm:max-w-[384px]">
               <div className="work-heading flex gap-2">
                 <div className="work-icon flex justify-center items-center">
@@ -379,9 +405,11 @@ const Home = () => {
                 </div>
               </div>
               <div className="viewbutton cursor-pointer bg-[var(--primary-border)] w-36 p-2 absolute bottom-10 rounded-xl">
-                <div className="inner bg-[var(--primary-purple)] p-2 rounded-xl flex justify-center items-center">
-                  <p className="text-mano">View Works</p>
-                </div>
+                <a href="https://github.com/piyushjha03" target="_blank">
+                  <div className="inner bg-[var(--primary-purple)] p-2 rounded-xl flex justify-center items-center">
+                    <p className="text-mano">View Works</p>
+                  </div>
+                </a>
               </div>
             </div>
             <div className="education  overflow-scroll h-full max-h-[450px]   bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-4 pt-0 flex flex-col gap-6 items-center  max-w-[480px] mt-0 md:w-full md:mt-4 sm:min-w-[480px]">
@@ -415,10 +443,10 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="rightdate min-h-full relative">
-                    <p className="text-sm absolute top-0 transform translate-y-[-20px] translate-x-[-50px] bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-2 tex-mano text-white">
+                    <p className="text-sm absolute bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-2 tex-mano text-white top-0 transform translate-y-[-25px]  sm:translate-y-[-20px] sm:translate-x-[-50px]">
                       2025
                     </p>
-                    <p className="text-sm absolute bottom-0 transform translate-y-[17px] translate-x-[-50px] bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-2 tex-mano text-white">
+                    <p className="text-sm absolute bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-2 tex-mano text-white  bottom-0 transform translate-x-[0px] translate-y-[17px] sm:translate-x-[-50px]">
                       2021
                     </p>
                   </div>
@@ -439,7 +467,7 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="rightdate min-h-full relative">
-                    <p className="text-sm absolute bottom-0 transform translate-y-[17px] translate-x-[-50px] bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-2 tex-mano text-white">
+                    <p className="text-sm absolute  bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-2 tex-mano text-white bottom-0 transform translate-y-[17px] translate-x-[0px] sm:translate-x-[-50px]">
                       2019
                     </p>
                   </div>
@@ -458,7 +486,7 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="rightdate min-h-full relative">
-                    <p className="text-sm absolute bottom-0 transform translate-y-[17px] translate-x-[-50px] bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-2 tex-mano text-white">
+                    <p className="text-sm absolute bottom-0 transform translate-y-[17px] bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-2 tex-mano text-white translate-x-[0px] sm:translate-x-[-50px]">
                       2005
                     </p>
                   </div>
