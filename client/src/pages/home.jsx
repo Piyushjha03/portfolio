@@ -1,6 +1,5 @@
 import "./home.css";
 import { BsStack } from "react-icons/bs";
-import { MdArrowOutward } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoSchoolSharp } from "react-icons/io5";
 import { FaBook } from "react-icons/fa";
@@ -8,7 +7,7 @@ import { FaClock } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaFileArrowDown } from "react-icons/fa6";
-
+import Workbag from "../assets/workbag.svg";
 import Language from "../assets/language.svg";
 import Tech from "../components/tech";
 import Hindi from "../assets/hindi.svg";
@@ -34,7 +33,7 @@ import Github from "../assets/github.svg";
 import Mysql from "../assets/mysql.svg";
 import postgresql from "../assets/postgresql.svg";
 import Postman from "../assets/postman.svg";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
 const Home = () => {
   const [text, setText] = useState("");
@@ -119,7 +118,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="middle flex flex-col w-full max-w-[500px]">
+        <div className="middle flex flex-col w-full ">
           <div className="socials flex gap-3 w-full">
             <div className="linkedin bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)] flex-1 rounded-3xl p-2 flex flex-col  items-center relative">
               <img
@@ -150,7 +149,7 @@ const Home = () => {
               />
             </div>
           </div>
-          <div className="personal w-full min-w-[500px]  max-w-[500px] mt-4  bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-4 flex flex-col gap-3 items-center relative">
+          <div className="personal w-full mt-4  bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-4 py-9 flex flex-col gap-3 items-center relative">
             <div className="personal-top flex w-full gap-4">
               <div className="personal-image -scale-x-100 hover:scale-x-100">
                 <img src="/Pfp.webp" alt="Personal" className="w-32 h-32" />
@@ -204,27 +203,138 @@ const Home = () => {
               </div>
             </div>
             <div className="personal-bottom w-full flex gap-4">
-              <div className="emailme flex gap-2 justify-center items-center flex-1 bg-[var(--primary-border)] h-14 rounded-xl">
+              <div className="emailme cursor-pointer flex gap-2 justify-center items-center flex-1 bg-[var(--primary-border)] h-12 rounded-xl">
                 <MdEmail color="#a290fc" />
                 <p className="font-mano text-[var(--dark-gray-text)]">
                   Email Me
                 </p>
               </div>
-              <div className="whatsappme flex gap-2 justify-center items-center flex-1 bg-[var(--primary-border)] h-14 rounded-xl">
+              <div className="whatsappme cursor-pointer flex gap-2 justify-center items-center flex-1 bg-[var(--primary-border)] h-12 rounded-xl">
                 <IoLogoWhatsapp color="#a290fc" />
                 <p className="font-mano text-[var(--dark-gray-text)]">
                   WhatsApp Me
                 </p>
               </div>
             </div>
-            <div className="resume absolute top-4 right-6 flex justify-center items-center gap-2">
+            <div className="resume absolute top-8 right-6 flex justify-center items-center gap-2">
               <p className="text-[var(--text-white)]">Resume</p>
               <div className="download bg-[#1f1f1f] p-2 rounded-md text-2xl cursor-pointer hover:-translate-y-1 duration-300 ">
                 <FaFileArrowDown color="#cccccc" />
               </div>
             </div>
           </div>
-          <div className="education"></div>
+          <div className="education h-full w-full mt-4  bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-4 flex flex-col gap-3 items-center">
+            <div className="twentytwentfive w-full bg-[var(--primary-border)]"></div>
+          </div>
+        </div>
+        <div className="right flex flex-col w-fit">
+          <div className="work relative pb-16 w-full  bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-6 flex flex-col  items-center gap-6">
+            <div className="work-heading flex gap-2">
+              <div className="work-icon flex justify-center items-center">
+                <img src={Workbag} alt="Work" className="w-5 h-5" />
+              </div>
+              <h2 className="text-[var(--dark-gray-text)] font-mano font-light">
+                Projects
+              </h2>
+            </div>
+            <div className="work-content w-full overflow-hidden max-w-[400px]">
+              <div
+                className="display scroll imgBox w-full flex gap-2"
+                style={{ "--time": "30s" }}
+              >
+                <div className="flex">
+                  <img
+                    src={"/workss1.webp"}
+                    alt="Work"
+                    className="w-56 h-32 rounded-md"
+                  />
+                  <img
+                    src={"/workss2.webp"}
+                    alt="Work"
+                    className="w-56 h-32 rounded-md"
+                  />
+                  <img
+                    src={"/workss3.webp"}
+                    alt="Work"
+                    className="w-56 h-32 rounded-md"
+                  />
+                  <img
+                    src={"/workss4.webp"}
+                    alt="Work"
+                    className="w-56 h-32 rounded-md"
+                  />
+                  <img
+                    src={"/workss5.webp"}
+                    alt="Work"
+                    className="w-56 h-32 rounded-md"
+                  />
+                  <img
+                    src={"/workss6.webp"}
+                    alt="Work"
+                    className="w-56 h-32 rounded-md"
+                  />
+                  <img
+                    src={"/workss7.webp"}
+                    alt="Work"
+                    className="w-56 h-32 rounded-md"
+                  />
+                  <img
+                    src={"/workss8.webp"}
+                    alt="Work"
+                    className="w-56 h-32 rounded-md"
+                  />
+                </div>
+                <div className="flex">
+                  <img
+                    src={"/workss1.webp"}
+                    alt="Work"
+                    className="w-56 h-32 rounded-md"
+                  />
+                  <img
+                    src={"/workss2.webp"}
+                    alt="Work"
+                    className="w-56 h-32 rounded-md"
+                  />
+                  <img
+                    src={"/workss3.webp"}
+                    alt="Work"
+                    className="w-56 h-32 rounded-md"
+                  />
+                  <img
+                    src={"/workss4.webp"}
+                    alt="Work"
+                    className="w-56 h-32 rounded-md"
+                  />
+                  <img
+                    src={"/workss5.webp"}
+                    alt="Work"
+                    className="w-56 h-32 rounded-md"
+                  />
+                  <img
+                    src={"/workss6.webp"}
+                    alt="Work"
+                    className="w-56 h-32 rounded-md"
+                  />
+                  <img
+                    src={"/workss7.webp"}
+                    alt="Work"
+                    className="w-56 h-32 rounded-md"
+                  />
+                  <img
+                    src={"/workss8.webp"}
+                    alt="Work"
+                    className="w-56 h-32 rounded-md"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="viewbutton cursor-pointer bg-[var(--primary-border)] w-36 p-2 absolute bottom-10 rounded-xl">
+              <div className="inner bg-[var(--primary-purple)] p-2 rounded-xl flex justify-center items-center">
+                <p className="text-mano">View Works</p>
+              </div>
+            </div>
+          </div>
+          <div className="contact h-full w-full mt-4  bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-4 flex flex-col gap-3 items-center"></div>
         </div>
       </div>
     </>
