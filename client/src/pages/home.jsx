@@ -75,10 +75,10 @@ const Home = () => {
 
   return (
     <>
-      <div className="canvas w-screen p-8 gap-4 flex justify-center items-center flex-col md:flex-row ">
+      <div className="canvas w-screen gap-4 flex justify-center items-center flex-col md:flex-row p-2 pt-8 sm:p-8">
         <div className="msresponsive-top flex gap-4 flex-col-reverse sm:flex-row">
           <div className="left flex flex-col gap-4">
-            <div className="tech-stack bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)] w-96 rounded-3xl p-6 flex flex-col  items-center min-w-full sm:min-h-fit">
+            <div className="tech-stack bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)] w-96 rounded-3xl p-6 flex flex-col  items-center min-w-full sm:min-h-fit ">
               <div className="tech-stack-heading flex gap-2">
                 <div className="stack-icon flex justify-center items-center">
                   <BsStack color="#a290fc" />
@@ -126,7 +126,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="middle flex flex-col w-full min-w-[480px] max-w-[480px] sm:">
+          <div className="middle flex flex-col w-full max-w-[480px] sm:max-w-[480px] sm:min-w-[480px]">
             <div className="socials flex gap-3 w-full">
               <div className="linkedin bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)] flex-1 rounded-3xl p-2 flex flex-col  items-center relative">
                 <img
@@ -157,7 +157,7 @@ const Home = () => {
                 />
               </div>
             </div>
-            <div className="personal w-full mt-4  bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-4 py-9 flex flex-col gap-3 items-center relative">
+            <div className="personal w-full mt-4 bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-4 py-9 flex flex-col gap-3 items-center relative">
               <div className="personal-top flex w-full gap-4">
                 <div className="personal-image -scale-x-100 hover:scale-x-100">
                   <img src="/Pfp.webp" alt="Personal" className="w-32 h-32" />
@@ -183,7 +183,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div className="personal-middle w-full bg-[var(--tone-black)] border-spacing-3 border-[1px] border-[var(--primary-border)] rounded-2xl px-4 py-2 flex flex-wrap gap-2">
+              <div className="personal-middle w-full bg-[var(--tone-black)] border-spacing-3 border-[1px] border-[var(--primary-border)] rounded-2xl  flex flex-wrap gap-2 py-2 px-2 sm:px-4 ">
                 <div className="location w-fit bg-[var(--primary-border)] border-spacing-3 border-[1px] border-[var(--secondary-border)] rounded-3xl py-1 px-2 flex gap-1 items-center">
                   <FaLocationDot color="#a290fc" />
                   <p className="text-[var(--text-white)] font-mano text-[12px]">
@@ -210,21 +210,27 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-              <div className="personal-bottom w-full flex gap-4">
-                <div className="emailme cursor-pointer flex gap-2 justify-center items-center flex-1 bg-[var(--primary-border)] h-12 rounded-xl">
+              <div className="personal-bottom w-full flex gap-4 flex-col sm:flex-row">
+                <div className="emailme cursor-pointer flex gap-2 justify-center items-center flex-1 bg-[var(--primary-border)] min-h-12 rounded-xl">
                   <MdEmail color="#a290fc" />
                   <p className="font-mano text-[var(--dark-gray-text)]">
                     Email Me
                   </p>
                 </div>
-                <div className="whatsappme cursor-pointer flex gap-2 justify-center items-center flex-1 bg-[var(--primary-border)] h-12 rounded-xl">
+                <div className="whatsappme cursor-pointer flex gap-2 justify-center items-center flex-1 bg-[var(--primary-border)] min-h-12 rounded-xl">
                   <IoLogoWhatsapp color="#a290fc" />
                   <p className="font-mano text-[var(--dark-gray-text)]">
                     WhatsApp Me
                   </p>
                 </div>
+                <div className="resume flex justify-center items-center gap-2 cursor-pointer flex-1 bg-[var(--primary-border)] min-h-12 rounded-xl sm:hidden">
+                  <p className="text-[var(--text-white)]">Resume</p>
+                  <div className="download  p-2 rounded-md text-2xl cursor-pointer hover:-translate-y-1 duration-300 ">
+                    <FaFileArrowDown color="#cccccc" />
+                  </div>
+                </div>
               </div>
-              <div className="resume absolute top-8 right-6 flex justify-center items-center gap-2">
+              <div className="resume absolute top-8 right-6  justify-center items-center gap-2 hidden sm:flex">
                 <p className="text-[var(--text-white)]">Resume</p>
                 <div className="download bg-[#1f1f1f] p-2 rounded-md text-2xl cursor-pointer hover:-translate-y-1 duration-300 ">
                   <FaFileArrowDown color="#cccccc" />
@@ -378,7 +384,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="education  overflow-scroll h-full max-h-[450px]   bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-4 pt-0 flex flex-col gap-6 items-center min-w-[480px] max-w-[480px] mt-0 md:w-full md:mt-4">
+            <div className="education  overflow-scroll h-full max-h-[450px]   bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-4 pt-0 flex flex-col gap-6 items-center  max-w-[480px] mt-0 md:w-full md:mt-4 sm:min-w-[480px]">
               <div className="education-header w-full flex justify-center items-center bg-[var(--primary-bg)] gap-2 sticky top-0 py-3">
                 <div className="education-icon flex justify-center items-center">
                   <img src={Education} alt="Education" className="w-5 h-5" />
