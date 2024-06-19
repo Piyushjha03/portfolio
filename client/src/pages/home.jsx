@@ -277,7 +277,7 @@ const Home = () => {
           </div>
         </div>
         <div className="msresponsive-bottom w-full flex justify-center items-center ">
-          <div className="right flex w-fit flex-col gap-4 md:flex-col sm:flex-row">
+          <div className="right flex flex-col gap-4 md:flex-col sm:flex-row">
             <div className="work relative pb-16  bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-6 flex flex-col  items-center gap-6 w-full max-w-full md:min-w-full sm:max-w-[384px]">
               <div className="work-heading flex gap-2">
                 <div className="work-icon flex justify-center items-center">
@@ -394,7 +394,7 @@ const Home = () => {
                 </h2>
               </div>
               <div className="educontent w-full">
-                <div className="2025 w-full h-[35%] flex justify-between items-stretch gap-6">
+                <div className="2025 w-full h-[35%] flex justify-start items-stretch gap-6 sm:justify-between">
                   <div className="leftinfo flex flex-col gap-3 max-w-[70%] flex-2 bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-4">
                     <h2 className="text-mano text-xl text-[#e4e4e6]">
                       Engineering
@@ -402,7 +402,7 @@ const Home = () => {
                     <p className="text-mano text-xs text-[var(--dark-gray-text)] ">
                       In Electrical and Computer
                     </p>
-                    <p className="text-mano text-xs text-[var(--dark-gray-text)] pb-24">
+                    <p className="text-mano text-xs text-[var(--dark-gray-text)] pb-24 break-words">
                       From Thapar Institute of Engineering and Technology
                     </p>
                   </div>
@@ -423,7 +423,7 @@ const Home = () => {
                     </p>
                   </div>
                 </div>
-                <div className="2021 h-[35%] flex justify-between items-stretch gap-6">
+                <div className="2021 h-[35%] flex justify-start items-stretch gap-6 sm:justify-between">
                   <div className="leftinfo flex flex-col gap-3 min-w-[70%] max-w-[70%] flex-2 bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-4">
                     <h2 className="text-mano text-xl text-[#e4e4e6]">XIIth</h2>
                     <p className="text-mano text-xs text-[var(--dark-gray-text)] ">
@@ -444,7 +444,7 @@ const Home = () => {
                     </p>
                   </div>
                 </div>
-                <div className="2019 w-full h-[35%] flex justify-between items-stretch gap-6">
+                <div className="2019 w-full h-[35%] flex justify-start items-stretch gap-6 sm:justify-between">
                   <div className="leftinfo flex flex-col gap-3 min-w-[70%] max-w-[70%] flex-2 bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-4">
                     <h2 className="text-mano text-xl text-[#e4e4e6]">Xth</h2>
 
