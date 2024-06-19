@@ -75,10 +75,10 @@ const Home = () => {
 
   return (
     <>
-      <div className="canvas w-screen gap-4 flex justify-center items-center flex-col md:flex-row p-2 sm:p-8">
-        <div className="msresponsive-top w-full flex gap-4 flex-col-reverse sm:flex-row">
-          <div className="left flex flex-col gap-4 w-full">
-            <div className="tech-stack bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)] w-96 rounded-3xl p-6 flex flex-col  items-center min-w-full sm:min-h-fit ">
+      <div className="canvas w-screen gap-4 flex justify-center items-center flex-col md:flex-row p-2 py-8 sm:p-8">
+        <div className="msresponsive-top w-full h-full flex gap-4 flex-col-reverse items-center justify-center sm:flex-row">
+          <div className="left flex flex-col gap-4 max-w-full w-[480px] sm:max-w-96">
+            <div className="tech-stack w-full bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-6 flex flex-col  items-center sm:min-w-96 sm:min-h-fit ">
               <div className="tech-stack-heading flex gap-2">
                 <div className="stack-icon flex justify-center items-center">
                   <BsStack color="#a290fc" />
@@ -106,7 +106,7 @@ const Home = () => {
                 <Tech imgsrc={Postman} techname="Postman" />
               </div>
             </div>
-            <div className="language bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)] w-96 rounded-3xl p-6 flex flex-col  items-center min-w-full sm:min-h-fit">
+            <div className="language bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)] sm:min-w-96 rounded-3xl p-6 flex flex-col  items-center  sm:min-h-fit">
               <div className="language-heading flex gap-2">
                 <div className="language-icon flex justify-center items-center h-[36px] w-[36px]">
                   {/* <HiMiniLanguage color="#a290fc" /> */}
@@ -126,7 +126,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="middle flex flex-col w-full max-w-[480px] sm:max-w-[480px] sm:min-w-[480px]">
+          <div className="middle flex flex-col h-full w-full max-w-[480px] sm:max-w-[480px] sm:min-w-[480px]">
             <div className="socials flex gap-3 w-full">
               <div className="linkedin bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)] flex-1 rounded-3xl p-2 flex flex-col  items-center relative">
                 <a
@@ -189,7 +189,13 @@ const Home = () => {
                   </div>
                   <div className="perosnal-info-bottom">
                     <h1 className="className=text-[var(--dark-gray-text)] font-mano">
-                      <span className="typewriter">I am a developer</span>
+                      <span className="typewriter text-sm text-mano text-[var(--text-white)]">
+                        I am a{" "}
+                        <span className="text-lg text-[var(--primary-purple)] ml-1">
+                          {" "}
+                          Developer
+                        </span>
+                      </span>
                     </h1>
                   </div>
                 </div>
@@ -263,7 +269,7 @@ const Home = () => {
                 </a>
               </div>
             </div>
-            <div className="contact relative h-full w-full mt-4  bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-4 flex flex-col gap-4 items-center">
+            <div className="contact relative h-full w-full mt-5 pb-11 bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-4 flex flex-col gap-6 items-center">
               <div className="contact-heading flex gap-2">
                 <div className="contact-icon flex justify-center items-center">
                   <FaHandshakeSimple color="#a290fc" className="h-6 w-6" />
@@ -272,8 +278,8 @@ const Home = () => {
                   Connect
                 </h2>
               </div>
-              <div className="contact-content w-full flex flex-col gap-3">
-                <form>
+              <div className="contact-content w-full flex flex-col gap-4">
+                <form className="gap-4">
                   <div className="contact-input flex flex-col gap-2 text-mano text-white">
                     <input
                       type="text"
@@ -302,9 +308,9 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="msresponsive-bottom w-full flex justify-center items-center ">
-          <div className="right w-full flex flex-col gap-4 md:flex-col sm:flex-row">
-            <div className="work relative pb-16  bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-6 flex flex-col  items-center gap-6 w-full max-w-full md:min-w-full sm:max-w-[384px]">
+        <div className="msresponsive-bottom w-full flex justify-center items-center sm:justify-center">
+          <div className="right flex flex-col gap-4 w-full max-w-[480px] sm:max-w-full sm:w-full md:flex-col items-center sm:flex-row sm:justify-center sm:items-stretch">
+            <div className="work relative pb-16  bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-6 flex flex-col  items-center gap-6 w-full md:min-w-full sm:max-w-[384px]">
               <div className="work-heading flex gap-2">
                 <div className="work-icon flex justify-center items-center">
                   <img src={Workbag} alt="Work" className="w-5 h-5" />
@@ -412,7 +418,7 @@ const Home = () => {
                 </a>
               </div>
             </div>
-            <div className="education  overflow-scroll h-full max-h-[450px]   bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-4 pt-0 flex flex-col gap-6 items-center  max-w-[480px] mt-0 md:w-full md:mt-4 sm:min-w-[480px]">
+            <div className="education  overflow-scroll h-full max-h-[450px]   bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-4 pt-0 flex flex-col gap-6 items-center mt-0 w-full md:w-full md:mt-4 sm:max-w-[480px]">
               <div className="education-header w-full flex justify-center items-center bg-[var(--primary-bg)] gap-2 sticky top-0 py-3">
                 <div className="education-icon flex justify-center items-center">
                   <img src={Education} alt="Education" className="w-5 h-5" />
