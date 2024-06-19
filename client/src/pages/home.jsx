@@ -7,6 +7,9 @@ import { FaClock } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaFileArrowDown } from "react-icons/fa6";
+import { FaHandshakeSimple } from "react-icons/fa6";
+import { IoIosSend } from "react-icons/io";
+
 import Workbag from "../assets/workbag.svg";
 import Language from "../assets/language.svg";
 import Tech from "../components/tech";
@@ -118,7 +121,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="middle flex flex-col w-full ">
+        <div className="middle flex flex-col w-full min-w-[480px]">
           <div className="socials flex gap-3 w-full">
             <div className="linkedin bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)] flex-1 rounded-3xl p-2 flex flex-col  items-center relative">
               <img
@@ -223,8 +226,42 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="education h-full w-full mt-4  bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-4 flex flex-col gap-3 items-center">
-            <div className="twentytwentfive w-full bg-[var(--primary-border)]"></div>
+          <div className="contact relative h-full w-full mt-4  bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-4 flex flex-col gap-4 items-center">
+            <div className="contact-heading flex gap-2">
+              <div className="contact-icon flex justify-center items-center">
+                <FaHandshakeSimple color="#a290fc" className="h-6 w-6" />
+              </div>
+              <h2 className="text-[var(--dark-gray-text)] font-mano font-light">
+                Connect
+              </h2>
+            </div>
+            <div className="contact-content w-full flex flex-col gap-3">
+              <form>
+                <div className="contact-input flex flex-col gap-2 text-mano text-white">
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    className="bg-[var(--primary-border)] border-spacing-3 border-[1px] border-[var(--secondary-border)] rounded-xl p-2 focus:outline-none focus:border-[2px] focus:border-[var(--primary-purple)]"
+                  />
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    className="bg-[var(--primary-border)] border-spacing-3 border-[1px] border-[var(--secondary-border)] rounded-xl p-2 focus:outline-none focus:border-[2px] focus:border-[var(--primary-purple)]"
+                  />
+                  <textarea
+                    placeholder="Message"
+                    className=" bg-[var(--primary-border)] resize-none  border-spacing-3 border-[1px] border-[var(--secondary-border)] rounded-xl p-2 focus:outline-none focus:border-[2px] focus:border-[var(--primary-purple)] "
+                  />
+                </div>
+                <div className="contact-submit cursor-pointer bg-[var(--primary-border)] p-2 rounded-xl absolute bottom-2 right-4">
+                  <div className="inner bg-[var(--primary-purple)] p-2 rounded-xl flex justify-center items-center">
+                    <p className="text-mano flex ">
+                      <IoIosSend className="h-6 w-6" />
+                    </p>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
         <div className="right flex flex-col w-fit">
@@ -334,7 +371,41 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="contact h-full w-full mt-4  bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-4 flex flex-col gap-3 items-center"></div>
+          <div className="contact h-full w-full mt-4  bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-4 flex flex-col gap-6 items-center">
+            <div className="contact-heading flex gap-2">
+              <div className="contact-icon flex justify-center items-center">
+                <FaHandshakeSimple color="#a290fc" className="h-6 w-6" />
+              </div>
+              <h2 className="text-[var(--dark-gray-text)] font-mano font-light">
+                Connect
+              </h2>
+            </div>
+            <div className="contact-content w-full flex flex-col gap-3">
+              <form>
+                <div className="contact-input flex flex-col gap-4">
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    className="bg-[var(--primary-border)] border-spacing-3 border-[1px] border-[var(--secondary-border)] rounded-xl p-2"
+                  />
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    className="bg-[var(--primary-border)] border-spacing-3 border-[1px] border-[var(--secondary-border)] rounded-xl p-2"
+                  />
+                  <textarea
+                    placeholder="Message"
+                    className="bg-[var(--primary-border)] border-spacing-3 border-[1px] border-[var(--secondary-border)] rounded-xl p-2"
+                  />
+                </div>
+                <div className="contact-submit cursor-pointer bg-[var(--primary-border)] w-36 p-2 rounded-xl">
+                  <div className="inner bg-[var(--primary-purple)] p-2 rounded-xl flex justify-center items-center">
+                    <p className="text-mano">Submit</p>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </>
