@@ -50,6 +50,51 @@
   }
 }
 
+@keyframes pulse-dot-animation {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0.8;
+  }
+  70% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(3);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+}
+
+.pulse-dot:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: #a290fc;
+  border-radius: 100%;
+  opacity: 0.5;
+  transform: translate(-50%, -50%) scale(3);
+  animation: pulse-dot-animation 3s infinite;
+}
+
+.pulse-dot {
+  position: relative;
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  background: #8273ca;
+  color: transparent;
+  border-radius: 100%;
+  flex: 0 0 auto;
+  animation: opacity-animation 1s linear;
+  &.purple {
+    background: #8273ca;
+  }
+}
+
 /* add custom cursor */
 .typewriter::after {
   content: "|";

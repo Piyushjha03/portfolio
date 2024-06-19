@@ -9,7 +9,7 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import { FaFileArrowDown } from "react-icons/fa6";
 import { FaHandshakeSimple } from "react-icons/fa6";
 import { IoIosSend } from "react-icons/io";
-
+import Education from "../assets/education.svg";
 import Workbag from "../assets/workbag.svg";
 import Language from "../assets/language.svg";
 import Tech from "../components/tech";
@@ -75,7 +75,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="canvas w-screen p-8 flex gap-4">
+      <div className="canvas w-screen p-8  gap-4 flex">
         <div className="left flex flex-col gap-4">
           <div className="tech-stack bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)] w-96 rounded-3xl p-6 flex flex-col  items-center">
             <div className="tech-stack-heading flex gap-2">
@@ -371,39 +371,79 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="contact h-full w-full mt-4  bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-4 flex flex-col gap-6 items-center">
-            <div className="contact-heading flex gap-2">
-              <div className="contact-icon flex justify-center items-center">
-                <FaHandshakeSimple color="#a290fc" className="h-6 w-6" />
+          <div className="education overflow-scroll h-full max-h-[450px] w-full mt-4  bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-4 flex flex-col gap-6 items-center">
+            <div className="education-header flex gap-2 sticky top-0">
+              <div className="education-icon flex justify-center items-center">
+                <img src={Education} alt="Education" className="w-5 h-5" />
               </div>
               <h2 className="text-[var(--dark-gray-text)] font-mano font-light">
-                Connect
+                Education
               </h2>
             </div>
-            <div className="contact-content w-full flex flex-col gap-3">
-              <form>
-                <div className="contact-input flex flex-col gap-4">
-                  <input
-                    type="text"
-                    placeholder="Name"
-                    className="bg-[var(--primary-border)] border-spacing-3 border-[1px] border-[var(--secondary-border)] rounded-xl p-2"
-                  />
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    className="bg-[var(--primary-border)] border-spacing-3 border-[1px] border-[var(--secondary-border)] rounded-xl p-2"
-                  />
-                  <textarea
-                    placeholder="Message"
-                    className="bg-[var(--primary-border)] border-spacing-3 border-[1px] border-[var(--secondary-border)] rounded-xl p-2"
-                  />
+            <div className="educontent w-full ">
+              <div className="2025 w-full h-[35%] flex justify-between items-center gap-6">
+                <div className="leftinfo flex flex-col gap-3 max-w-[70%] flex-2 bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-4">
+                  <h2 className="text-mano text-xl text-[#e4e4e6]">
+                    Engineering
+                  </h2>
+                  <p className="text-mano text-xs text-[var(--dark-gray-text)] ">
+                    In Electrical and Computer
+                  </p>
+                  <p className="text-mano text-xs text-[var(--dark-gray-text)] pb-32">
+                    From Thapar Institute of Engineering and Technology
+                  </p>
                 </div>
-                <div className="contact-submit cursor-pointer bg-[var(--primary-border)] w-36 p-2 rounded-xl">
-                  <div className="inner bg-[var(--primary-purple)] p-2 rounded-xl flex justify-center items-center">
-                    <p className="text-mano">Submit</p>
+                <div className="centerline z-10 h-[100%] w-[2px] bg-[var(--dark-gray-text)] relative">
+                  <div className="dot absolute top-0 transform translate-x-[-40%] translate-y-[-50%]">
+                    <i className="pulse-dot purple z-50"></i>
+                  </div>
+                  <div className="dot absolute bottom-0 transform translate-x-[-40%] translate-y-[50%]">
+                    <i className="pulse-dot purple z-50"></i>
                   </div>
                 </div>
-              </form>
+                <div className="rightdate flex-1 h-full relative">
+                  <p className="text-sm absolute top-0 transform translate-y-[-15px] bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-2 tex-mano text-white">
+                    2025
+                  </p>
+                  <p className="text-sm absolute bottom-0 transform translate-y-[17px] bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-2 tex-mano text-white">
+                    2021
+                  </p>
+                </div>
+              </div>
+              <div className="2021 w-full h-[35%] flex justify-between items-center gap-6">
+                <div className="leftinfo min-w-[70%] max-w-[70%] flex-2 bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-4 tex-mano text-white">
+                  <h2>XII</h2>
+                  <p className="text-sm pb-36">in Science from JVM Shyamali</p>
+                </div>
+                <div className="centerline  h-[100%] w-[2px] bg-[var(--dark-gray-text)] relative">
+                  <div className="dot absolute bottom-0 transform translate-x-[-40%] translate-y-[50%]">
+                    <i className="pulse-dot purple z-50"></i>
+                  </div>
+                </div>
+                <div className="rightdate flex-1 h-full relative">
+                  <p className="text-sm absolute bottom-0 transform translate-y-[17px] bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-2 tex-mano text-white">
+                    2019
+                  </p>
+                </div>
+              </div>
+              <div className="2029 w-full h-[35%] flex justify-between items-center gap-6">
+                <div className="leftinfo min-w-[70%] max-w-[70%] flex-2 bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-4 tex-mano text-white">
+                  <h2>X</h2>
+                  <p className="text-sm pb-36">
+                    from Agrasen D.A.V Public School
+                  </p>
+                </div>
+                <div className="centerline  h-[100%] w-[2px] bg-[var(--dark-gray-text)] relative">
+                  <div className="dot absolute bottom-0 transform translate-x-[-40%] translate-y-[50%]">
+                    <i className="pulse-dot purple z-50"></i>
+                  </div>
+                </div>
+                <div className="rightdate flex-1 h-full relative">
+                  <p className="text-sm absolute bottom-0 transform translate-y-[17px] bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-2 tex-mano text-white">
+                    2017
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
