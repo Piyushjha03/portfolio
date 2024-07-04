@@ -75,7 +75,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="canvas w-screen gap-4 flex justify-center items-center flex-col md:flex-row p-2 py-8 sm:p-8">
+      <div className="canvas w-screen min-h-screen gap-4 flex justify-center items-center flex-col md:flex-row p-2 py-8 sm:p-8">
         <div className="msresponsive-top w-full h-full flex gap-4 flex-col-reverse items-center justify-center sm:flex-row">
           <div className="left flex flex-col gap-4 max-w-full w-[480px] sm:max-w-96">
             <div className="tech-stack w-full bg-[var(--primary-bg)] border-spacing-3 border-[1px] border-[var(--primary-border)]  rounded-3xl p-6 flex flex-col  items-center sm:min-w-96 sm:min-h-fit ">
