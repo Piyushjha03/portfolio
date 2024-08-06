@@ -279,7 +279,10 @@ const Home = () => {
                 </h2>
               </div>
               <div className="contact-content w-full flex flex-col gap-4">
-                <form className="gap-4">
+                <form 
+                  action="https://formspree.io/f/mdknznqp"
+                  method="POST" 
+                  className="gap-4">
                   <div className="contact-input flex flex-col gap-2 text-mano text-white">
                     <input
                       type="text"
@@ -296,13 +299,15 @@ const Home = () => {
                       className=" bg-[var(--primary-border)] resize-none  border-spacing-3 border-[1px] border-[var(--secondary-border)] rounded-xl p-2 focus:outline-none focus:border-[2px] focus:border-[var(--primary-purple)] "
                     />
                   </div>
-                  <div className="contact-submit cursor-pointer bg-[var(--primary-border)] p-2 rounded-xl absolute bottom-2 right-4">
-                    <div className="inner bg-[var(--primary-purple)] p-2 rounded-xl flex justify-center items-center">
+                   <button type="submit">
+                     <div className="contact-submit cursor-pointer bg-[var(--primary-border)] p-2 rounded-xl absolute bottom-2 right-4">
+                      <div className="inner bg-[var(--primary-purple)] p-2 rounded-xl flex justify-center items-center">
                       <p className="text-mano flex ">
                         <IoIosSend className="h-6 w-6" />
                       </p>
                     </div>
                   </div>
+                   </button>
                 </form>
               </div>
             </div>
